@@ -86,7 +86,7 @@ jobs:
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition: task-definition.json
-          container-name: laranginx
+          container-name: nginx
           image: 263269128568.dkr.ecr.ap-northeast-1.amazonaws.com/laranginx:latest
         env:
           AWS_DEFAULT_REGION: ap-northeast-1

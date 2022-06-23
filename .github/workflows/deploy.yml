@@ -62,7 +62,7 @@ jobs:
           ECR_REPOSITORY: laranginx
           IMAGE_TAG: latest
         run: |
-          docker build . -f Dockerfile_Nginx -t laranginx
+          docker build -f Dockerfile_Nginx -t laranginx .
           docker tag laranginx:latest $ECR_REGISTRY/laranginx:$IMAGE_TAG
           docker push $ECR_REGISTRY/laranginx:$IMAGE_TAG
       - name: Download task definition
